@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 30vw;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 2px -2px gray;
+    background-color: #a7a7db;
+}
+
+h2 {
+    color: #eee;
+    
+}
+
+.inputs p {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.inputs input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+}
+
+input[type="button"] {
+    background-color: #824df6;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    opacity: 0.8;
+}
