@@ -1,3 +1,8 @@
+## ATTENTION
+A branch called **develop** was created to push the code with improvements.
+The develop branch was then pushed to the master branch.
+You can see the commit history on **https://github.com/hamzagic/codest/commits**
+
 ## JS/React app cleanup
 
 Jenny is a newbie developer that has decided to learn Javascript and React. She wrote this simple application to keep track of which movies she wants to see, and which ones she has seen.
