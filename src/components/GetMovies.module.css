@@ -1,0 +1,14 @@
+.container {
+    width: 30vw;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 2px -2px #ccc;
+    margin-bottom: 10px;
+    background-color: #ddf;
+}
+
+img {
+    margin-top: 15px;
+}
