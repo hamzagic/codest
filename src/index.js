@@ -38,7 +38,9 @@ export function getAllMovies() {
 		return JSON.parse(movies);
 	}
 }
-
+// movie object doesn't have a key called 'description'
+// change to comment instead 
+// otherwise it won't be rendered in the movies list
 export function add(title, description, image) {
 	var movie = {};
 	movie.title = title;
@@ -52,7 +54,9 @@ export function add(title, description, image) {
 
 	render();
 }
-
+// movie object doesn't have a key called 'description'
+// change to comment instead
+// otherwise it won't be rendered in the movies list
 export function addWatchedMovie(title, description, image) {
 	var movie = {};
 	movie.title = title;
@@ -60,6 +64,7 @@ export function addWatchedMovie(title, description, image) {
 	movie.image = image;
 
 	var movies = getWatchedMovies();
+	// make sure to check if the movie is already on the list before pushing
 	movies.push(movie);
 
 	localStorage.setItem('movies-watched', JSON.stringify(movies));
@@ -73,6 +78,7 @@ export function removeWatchedMovie(title) {
 	for (var i = 0; i < movies.length; i++) {
 	   if (!movies[i]) continue;
 		if (movies[i].title == title) {
+			// remove the movie item instead of creating a null variable
 			movies[i] = null
 		}
 	}
