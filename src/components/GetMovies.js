@@ -1,11 +1,17 @@
-import React from 'react';
-import { addWatchedMovie, getAllMovies } from '../index';
+import React, { useContext } from 'react';
+import MovieContext from '../store/movie-context';
 import styles from './GetMovies.module.css';
 
 const GetMovies = () => {
-    const movies = getAllMovies();
-    const addMovieHandler = (title, comment, image) => {
-      addWatchedMovie(title, comment, image)
+    const movieCtx = useContext(MovieContext);
+    const movies = movieCtx.movies;
+  
+    const addMovieToWatchedHandler = (title, comment, image) => {
+      movieCtx.addToWatched({
+        title: title,
+        image: image,
+        comment: comment
+      });
     }
 
     return (
@@ -15,7 +21,7 @@ const GetMovies = () => {
             <img src={movie.image} height="100px" alt={movie.title} />
           </div>
           <span>
-            <a className={styles.watched} href="#" onClick={() => { addMovieHandler(movie.title, movie.comment, movie.image) }}>
+            <a className={styles.watched} href="#" onClick={() => { addMovieToWatchedHandler(movie.title, movie.comment, movie.image) }}>
               {movie.title}
             </a>
           </span>

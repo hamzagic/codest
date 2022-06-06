@@ -8,7 +8,7 @@ function App(props) {
   return (
     <div className="App">
      <AddMovieForm />
-
+     
       <h1>Watchlist:</h1>
       <GetMovies onClick={props.addMovieHandler} />
 

@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
-import { add } from '../index';
+import React, { useState, useContext } from 'react';
+import MovieContext from '../store/movie-context';
+
 import styles from './AddMovieForm.module.css';
 
 const AddMovieForm = () => {
+  const movieCtx = useContext(MovieContext);
+
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
   const [comment, setComment] = useState('');
 
   const addMovieHandler = (title, comment, image) => {
-    if(title.trim().length == 0 || comment.trim().length == 0 || image.trim().length == 0) {
+    if(title.trim().length === 0 || comment.trim().length === 0 || image.trim().length === 0) {
         return;
     }
-    add(title, comment, image);
+    movieCtx.addMovie({
+        title: title,
+        image: image,
+        comment: comment
+    });
+
     setTitle('');
     setImage('');
     setComment('');
